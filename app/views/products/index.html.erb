@@ -1,0 +1,19 @@
+<div class="hero">
+  <h1 class="index"> Products </h1>
+
+  </div>
+
+  <table class="index">
+    <tr>
+      <th>Product Name</th>
+      <th>Price</th>
+    </tr>
+
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= link_to(product.name,product_path(product)) %></td>
+        <td><%= sprintf("$%.2f",product.price) %></td>
+      </tr>
+    <% end %>
+
+  </table>

@@ -1,0 +1,24 @@
+<h1>Product Details</h1>
+
+<table class="show">
+  <tr>
+    <th>Product: </th>
+    <td> <%= @product.name %> </td>
+  </tr>
+  <tr>
+    <th>Price: </th>
+    <td> <%= number_to_currency(@product.price) %> </td> 
+  </tr>
+  <tr>
+    <th>Available stock: </th>
+    <td> <%= @product.stock %> </td>
+  </tr>
+  <tr>
+    <th>Views: </th>
+    <td> <%= @product.views %> </td>
+  </tr>
+</table
+
+<div>
+  <h4><%= link_to("Return to All Products list", products_path) %></h4>
+</div>

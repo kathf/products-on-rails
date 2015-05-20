@@ -1,0 +1,69 @@
+// Place all the styles related to the jobs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$color-dark: #4E234B;
+$color-light: #EBE0C2;
+$another: #A65B58;
+
+
+body {
+  // background-color: $color-light;
+  background-image: url("photo_shopping2.jpg");
+  background-size: cover;
+  color: $color-dark;
+  font-family: helvetica;
+}
+
+// .hero {
+//   background-image: url("photo_shopping2.jpg");
+//   background-size: cover;
+//   height: 200px;
+//   margin: 0 0 20px 0;
+//   padding: 0;
+// }
+
+h1, h4 {
+  text-align: center;
+  font-weight:900;
+  margin: 0;
+}
+
+h1 {
+  color: $color-light;
+  text-shadow: 2px 2px $color-dark;
+  font-size: 70px;
+  line-height:120px;
+}
+
+
+.show {
+  th, td {text-align: left;
+  }
+}
+
+table {
+  padding: 15px;
+  margin: 0 auto;
+  border: 1px solid $color-dark;
+  text-align: center;
+  background-color: $color-light;
+}
+
+table.index {
+  th {
+    border-bottom: 1px solid $color-dark;
+  }
+
+  th, td {
+    min-width: 200px;
+  }
+}
+
+a:link {
+  color: #CB6295;
+}
+
+a:visited {
+  color: #8E2F48;
+}
