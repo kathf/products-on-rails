@@ -1,4 +1,6 @@
-<h1>Product Details</h1>
+<div class="hero">
+  <h1>Product Details</h1>
+</div>
 
 <table class="show">
   <tr>
@@ -7,7 +9,7 @@
   </tr>
   <tr>
     <th>Price: </th>
-    <td> <%= number_to_currency(@product.price) %> </td> 
+    <td> <%= number_to_currency(@product.price) %> </td>
   </tr>
   <tr>
     <th>Available stock: </th>
@@ -17,8 +19,8 @@
     <th>Views: </th>
     <td> <%= @product.views %> </td>
   </tr>
-</table
+</table>
 
-<div>
-  <h4><%= link_to("Return to All Products list", products_path) %></h4>
-</div>
+
+<%= link_to "Add to Cart", new_cart_path(@product), class: "button" %>
+<%= link_to "Return to All Products List", products_path, class: "button" %>

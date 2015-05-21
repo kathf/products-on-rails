@@ -1,0 +1,9 @@
+<div class="hero">
+  <h1> Added to your cart! </h1>
+</div>
+
+<p> Quantity: </p>
+<%= form_for @cart do |form| %>
+  <%= form.text_field :quantity %>
+  <%= form.submit %>
+<% end %>

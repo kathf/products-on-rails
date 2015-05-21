@@ -8,34 +8,33 @@ $another: #A65B58;
 
 
 body {
-  // background-color: $color-light;
-  background-image: url("photo_shopping2.jpg");
-  background-size: cover;
+  background-color: $color-dark;
   color: $color-dark;
   font-family: helvetica;
 }
 
-// .hero {
-//   background-image: url("photo_shopping2.jpg");
-//   background-size: cover;
-//   height: 200px;
-//   margin: 0 0 20px 0;
-//   padding: 0;
-// }
+.hero {
+  background-image: url("photo_shopping2.jpg");
+  background-size: cover;
+  opacity: 0.7;
+  height: 150px;
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  h1 {
+    color: $color-light;
+    text-shadow: 2px 2px $color-dark;
+    font-size: 70px;
+    line-height: 150px;
+  }
+
+}
 
 h1, h4 {
   text-align: center;
   font-weight:900;
   margin: 0;
 }
-
-h1 {
-  color: $color-light;
-  text-shadow: 2px 2px $color-dark;
-  font-size: 70px;
-  line-height:120px;
-}
-
 
 .show {
   th, td {text-align: left;
@@ -66,4 +65,40 @@ a:link {
 
 a:visited {
   color: #8E2F48;
+}
+
+.edit_delete {
+  display: block;
+  margin: 30px auto;
+  width: 200px;
+
+  a {
+    display: inline-block;
+    text-align: center;
+    border-radius: 25px;
+    background-color: $color-dark;
+    color: $color-light;
+    text-decoration: none;
+    padding: 10px 5px;
+    min-width: 75px;
+    float: left;
+  }
+
+  .btn2 {
+    float:right;
+  }
+}
+
+a.button {
+  clear: both;
+  text-align: center;
+  border: 2px solid $another;
+  border-radius: 25px;
+  background-color: $color-light;
+  color: $color-dark;
+  display: block;
+  text-decoration: none;
+  padding: 15px 10px;
+  margin: 100px auto;
+  width: 200px;
 }

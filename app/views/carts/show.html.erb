@@ -1,17 +1,19 @@
 <div class="hero">
-  <h1 class="index"> Local Marketplace </h1>
+  <h1 class="index"> Your cart: </h1>
 </div>
 
 <table class="index">
   <tr>
     <th>Product Name</th>
     <th>Price</th>
+    <th>Quantity</th>
   </tr>
 
   <% @products.each do |product| %>
     <tr>
       <td><%= link_to(product.name,product_path(product)) %></td>
-      <td><%= sprintf("$%.2f",product.price) %></td>
+      <td><%= product.price %></td>
+
     </tr>
   <% end %>
 
