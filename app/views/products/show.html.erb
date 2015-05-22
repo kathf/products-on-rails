@@ -2,25 +2,29 @@
   <h1>Product Details</h1>
 </div>
 
-<table class="show">
-  <tr>
-    <th>Product: </th>
-    <td> <%= @product.name %> </td>
-  </tr>
-  <tr>
-    <th>Price: </th>
-    <td> <%= number_to_currency(@product.price) %> </td>
-  </tr>
-  <tr>
-    <th>Available stock: </th>
-    <td> <%= @product.stock %> </td>
-  </tr>
-  <tr>
-    <th>Views: </th>
-    <td> <%= @product.views %> </td>
-  </tr>
-</table>
 
+<div class="container product_details_container">
+  <table>
+    <tr>
+      <td>Product name: </td>
+      <td> <%= @product.name %> </td>
+    </tr>
+    <tr>
+      <td>Price: </td>
+      <td> <%= number_to_currency(@product.price) %> </td>
+    </tr>
+    <tr>
+      <td>Available stock: </td>
+      <td> <%= @product.stock %> </td>
+    </tr>
+    <tr>
+      <td>Views: </td>
+      <td> <%= @product.views %> </td>
+    </tr>
+  </table>
+</div>
 
-<%= link_to "Add to Cart", new_cart_path(@product), class: "button" %>
-<%= link_to "Return to All Products List", products_path, class: "button" %>
+<div class="link_container">
+  <%= link_to "Edit product", edit_product_path(@product), class: "btn edit" %>
+  <%= link_to "Return to All Products", products_path, class: "btn return" %>
+</div>

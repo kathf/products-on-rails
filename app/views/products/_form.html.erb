@@ -1,0 +1,20 @@
+<div class="form_box">
+
+  <%= form_for @product do |form| %>
+    <p> Product name: <%= form.text_field :name %> </p>
+    <p> Price: <%= form.number_field :price %> </p>
+    <p> Available stock: <%= form.number_field :stock %> </p>
+    <%= form.submit class: "submit"%>
+  <% end %>
+  <br>
+</div>
+
+<span id="error_explanation">
+<% if @product.errors.any? %>
+    <ul>Errors:
+      <% @product.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+<% end %>
+</span>

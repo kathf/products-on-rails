@@ -1,0 +1,10 @@
+<h1> Edit your product: </h1>
+
+<div class="container">
+  <%= render partial: 'form' %>
+</div>
+
+<div class="link_container">
+  <%= link_to "Delete", product_path(@product), method: :delete, class: "btn delete", data: { confirm: "Are you sure?" } %>
+  <%= link_to "Return to All Products", products_path, class: "btn return" %>
+</div>

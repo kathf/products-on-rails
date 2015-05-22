@@ -2,103 +2,102 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$color-dark: #4E234B;
-$color-light: #EBE0C2;
-$another: #A65B58;
-
+$light: #e2f7ef;
+$green1: #0d3124;
+$green2: #134533;
+$green3: #185941;
+$green4: #29956d;
 
 body {
-  background-color: $color-dark;
-  color: $color-dark;
-  font-family: helvetica;
+  background-color: $green4;
+  color: $green1;
+  font-family: "source sans pro", helvetica;
 }
 
-.hero {
-  background-image: url("photo_shopping2.jpg");
-  background-size: cover;
-  opacity: 0.7;
-  height: 150px;
-  margin: 0 0 20px 0;
-  padding: 0;
-
-  h1 {
-    color: $color-light;
-    text-shadow: 2px 2px $color-dark;
-    font-size: 70px;
-    line-height: 150px;
-  }
-
-}
-
-h1, h4 {
+h1 {
+  font-size: 40px;
+  font-weight: 900;
+  margin: 30px auto;
   text-align: center;
-  font-weight:900;
-  margin: 0;
 }
 
-.show {
-  th, td {text-align: left;
-  }
+.container {
+    width: 50%;
+    margin: 0 auto;
+    min-height: 300px;
+}
+
+.form_box {
+  margin: 30px;
 }
 
 table {
-  padding: 15px;
-  margin: 0 auto;
-  border: 1px solid $color-dark;
-  text-align: center;
-  background-color: $color-light;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $green2;
+  background-color: $light;
 }
 
-table.index {
-  th {
-    border-bottom: 1px solid $color-dark;
-  }
-
-  th, td {
-    min-width: 200px;
-  }
+td {
+  padding: 2px 10px;
 }
 
-a:link {
-  color: #CB6295;
-}
 
-a:visited {
-  color: #8E2F48;
-}
-
-.edit_delete {
-  display: block;
-  margin: 30px auto;
-  width: 200px;
-
-  a {
-    display: inline-block;
-    text-align: center;
-    border-radius: 25px;
-    background-color: $color-dark;
-    color: $color-light;
-    text-decoration: none;
-    padding: 10px 5px;
-    min-width: 75px;
-    float: left;
-  }
-
-  .btn2 {
-    float:right;
+.product_list_container {
+  tr:first-of-type {
+  border-bottom: 1px solid $green2;
+  font-weight: 800;
   }
 }
 
-a.button {
-  clear: both;
-  text-align: center;
-  border: 2px solid $another;
-  border-radius: 25px;
-  background-color: $color-light;
-  color: $color-dark;
-  display: block;
-  text-decoration: none;
-  padding: 15px 10px;
+.product_details_container {
+  td:first-of-type {
+  border-right: 1px solid $green2;
+  font-weight: 800;
+  }
+}
+
+.link_container {
   margin: 100px auto;
-  width: 200px;
+  text-align: center;
+  clear: both;
+}
+
+.btn {
+
+  text-decoration: none;
+  background-color: $green2;
+  border-radius: 25px;
+  color: $light;
+  padding: 5px 15px;
+  display: inline-block;
+  min-width: 30px;
+
+
+  &.create {
+    margin: auto;
+  }
+
+  :hover {
+  }
+
+  .delete {
+    border: 1px solid red;
+  }
+}
+
+input {
+  float: right;
+}
+
+#error_explanation {
+  margin: 0 auto;
+  padding: 30px 0;
+  color: #B8433D;
+  list-style: none;
+}
+
+.field_with_errors {
+  border: 1px solid #B8433D;
+  display: inline-block;
 }
